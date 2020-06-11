@@ -16,7 +16,7 @@
   {
     "url" : "https://github.com/Wandalen/wImageReaderWebp/issues"
   },
-  "dependencies" : { "wTools" : "" },
-  "devDependencies" : { "wTesting" : "", "eslint" : "7.1.0", "wimagereaderwebp" : "file:." },
+  "dependencies" : { "wTools" : "alpha" },
+  "devDependencies" : { "eslint" : "7.1.0", "wimagereaderwebp" : "file:.", "wTesting" : "alpha" },
   "keywords" : [ "wTools" ]
 }
