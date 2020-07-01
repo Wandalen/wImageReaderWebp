@@ -1,5 +1,5 @@
 
-# module::ImageReaderWebp - Experimental [![Status](https://github.com/Wandalen/wImageReaderWebp/workflows/Test/badge.svg)](https://github.com/Wandalen/wImageReaderWebp/actions?query=workflow%3ATest)
+# module::ImageReaderWebp [![experimental](https://img.shields.io/badge/stability-experimental-orange.svg)](https://github.com/emersion/stability-badges#experimental) [![Status](https://github.com/Wandalen/wImageReaderWebp/workflows/Test/badge.svg)](https://github.com/Wandalen/wImageReaderWebp/actions?query=workflow%3ATest)
 
 ___
 
