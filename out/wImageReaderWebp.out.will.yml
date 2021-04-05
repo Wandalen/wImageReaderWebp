@@ -2,15 +2,12 @@ format: outwillfile-2.0
 root:
   - wImageReaderWebp.out
 consistency:
-  wImageReaderWebp.out.will.yml: &ref_0
-    hash: 6601a787a87662cb58b7245b18087ec8
-    size: 37389
-  ../.ex.will.yml: &ref_1
+  ../.ex.will.yml: &ref_0
     hash: 3f09955c26a9cc7b5b2ab7e64421b139
     size: 1709
-  ../.im.will.yml: &ref_2
-    hash: 0ec7d8ac68ef86f642ab1588dc9cc9bf
-    size: 4743
+  ../.im.will.yml: &ref_1
+    hash: 38fb8a3b329e5f3edcbf9b72ecd154e8
+    size: 4685
 module:
   wImageReaderWebp.out:
     about:
@@ -19,19 +16,19 @@ module:
       description: ___
       enabled: 1
       version: 0.4.0
-      interpreters:
+      interpreters: &ref_2
         - njs >= 10.0.0
         - chrome >= 60.0.0
         - firefox >= 60.0.0
-      keywords:
+      keywords: &ref_3
         - tools
         - wTools
       license: MIT
       author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors:
+      contributors: &ref_4
         - Kostiantyn Wandalen <wanalen@01.school>
       npm.name: wimagereaderwebp
-      npm.scripts:
+      npm.scripts: &ref_5
         test: wtest .run proto/**
         docgen: wdocgen .build proto
     path:
@@ -682,24 +679,6 @@ module:
           content: prime
         inherit:
           - files.transpile
-      exported.proto.export:
-        opts:
-          filePath: 'reflector::exported.proto.export'
-        criterion:
-          generated: 1
-          content: proto
-          export: 1
-        inherit:
-          - files.reflect
-      exported.files.proto.export:
-        opts:
-          filePath: 'reflector::exported.files.proto.export'
-        criterion:
-          generated: 1
-          content: proto
-          export: 1
-        inherit:
-          - files.reflect
     build:
       proto.export:
         steps:
@@ -788,9 +767,8 @@ module:
           content: proto
           export: 1
     consistency:
-      wImageReaderWebp.out.will.yml: *ref_0
-      ../.ex.will.yml: *ref_1
-      ../.im.will.yml: *ref_2
+      ../.ex.will.yml: *ref_0
+      ../.im.will.yml: *ref_1
   ../:
     about:
       name: wImageReaderWebp
@@ -798,21 +776,13 @@ module:
       description: ___
       enabled: 1
       version: 0.4.0
-      interpreters:
-        - njs >= 10.0.0
-        - chrome >= 60.0.0
-        - firefox >= 60.0.0
-      keywords:
-        - tools
-        - wTools
+      interpreters: *ref_2
+      keywords: *ref_3
       license: MIT
       author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors:
-        - Kostiantyn Wandalen <wanalen@01.school>
+      contributors: *ref_4
       npm.name: wimagereaderwebp
-      npm.scripts:
-        test: wtest .run proto/**
-        docgen: wdocgen .build proto
+      npm.scripts: *ref_5
     path:
       module.willfiles:
         criterion:
@@ -1468,6 +1438,5 @@ module:
         hash: 3f09955c26a9cc7b5b2ab7e64421b139
         size: 1709
       ../.im.will.yml:
-        hash: 0ec7d8ac68ef86f642ab1588dc9cc9bf
-        size: 4743
-      wImageReaderWebp.out.will.yml: *ref_0
+        hash: 38fb8a3b329e5f3edcbf9b72ecd154e8
+        size: 4685
